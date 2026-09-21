@@ -1,0 +1,24 @@
+{
+  "kind": "evm_project",
+  "token": {
+    "contract": "Handshake",
+    "name": "Handshake",
+    "symbol": "SHAKE",
+    "decimals": 18
+  },
+  "contracts": [
+    {
+      "contract": "TimeoutEscrow",
+      "constructorArgs": [
+        "$token"
+      ]
+    }
+  ],
+  "pool": {
+    "pairedCurrency": "0x0000000000000000000000000000000000000000",
+    "fee": 3000,
+    "tickSpacing": 60,
+    "initialPrice": "79228162514264337593543950336"
+  },
+  "notes": "Handshake (SHAKE) is the fixed-supply token. TimeoutEscrow holds SHAKE for a seller until the buyer releases it, the buyer disputes before the deadline and splits it evenly, or the seller claims it at or after the deadline. TimeoutEscrow has no owner, fee, administrator, initialization call, upgrade path, or pool hook; its sole constructor argument is the launch token address."
+}
